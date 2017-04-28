@@ -1,5 +1,5 @@
 # LaTeX coffins design: hands-on
-The `xcoffins` package of LaTeX3 allows for some interesting designs, especially for title pages. However, I found documentation lacking. Here, using the example of a report for my school, I show how you can use the `xcoffins` package to attain a relatively simple design. For a walk-through, see my [[blog post]]().
+The `xcoffins` package of LaTeX3 allows for some interesting designs, especially for title pages. However, I found documentation lacking. Here, using the example of a report for my school, I show how you can use the `xcoffins` package to attain a relatively simple design. For a walk-through, see my [blog post](https://medium.com/@literallywords/figuring-out-latex-coffins-82eb07effe34).
 
 ## Image resolution
 I have ripped the used images off the public websites of the respective institutions. They provide high-resolution `.eps` files, but those are behind a login-wall, so I'm not clear on the permission to provide them publicly. You can use the package `epstopdf` to deal with `.eps` files in LaTeX.
