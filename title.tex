@@ -1,0 +1,37 @@
+\NewCoffin \result
+\NewCoffin \anchor
+\NewCoffin \topbox
+\NewCoffin \ethlogo
+\NewCoffin \imagebox
+\NewCoffin \textbox
+\NewCoffin \departmentlogo
+\NewCoffin \textboxtext
+\NewCoffin \textboxsubtext
+\NewCoffin \authortext
+
+\SetHorizontalCoffin \result {}
+\SetHorizontalCoffin \topbox {\color{ethblue}\rule{220mm}{3cm}}
+\SetHorizontalCoffin \imagebox {\includegraphics[width=190mm]{ethphoto}}
+\SetHorizontalCoffin \ethlogo {\includegraphics[width=50mm]{ethlogo}}
+\SetHorizontalCoffin \textbox {\color{ethblue}\rule{190mm}{100mm}}
+\SetVerticalCoffin \textboxtext {160mm} {\fontsize{40}{48}\dinprobold\noindent\textcolor{white}{Report on xcoffins and other \\ LaTeX shenanigans}}
+\SetVerticalCoffin \textboxsubtext {160mm} {\fontsize{21}{25}\dinproregular\noindent\textcolor{white}{MSc Thesis \\ Month Year}}
+\SetVerticalCoffin \authortext {160mm} {\flushright\fontsize{21}{25}\dinprolight\noindent\textcolor{white}{Your Name Here}}
+\SetHorizontalCoffin \departmentlogo {\includegraphics[width=50mm]{departmentlogo}}
+
+% Positioning Hax
+\JoinCoffins \result \topbox
+\JoinCoffins \result[\topbox-hc, \topbox-b] \imagebox [hc, t](0mm,10mm)
+\JoinCoffins \result[\imagebox-l, \imagebox-t] \ethlogo [l, b](0mm,5mm)
+\JoinCoffins \result[\imagebox-l, \imagebox-b] \textbox [l, t](0mm,0mm)
+\JoinCoffins \result[\textbox-hc, \textbox-t] \textboxtext [hc, t](-5mm, -5mm)
+\JoinCoffins \result[\textboxtext-l, \textboxtext-b] \textboxsubtext [l, t](0mm, -5mm)
+\JoinCoffins \result[\textbox-r, \textbox-b] \authortext [r, b](-5mm, 5mm)
+\JoinCoffins \result[\textbox-l, \textbox-b] \departmentlogo [l, t](-5mm, -5mm)
+
+
+% Generate the page
+\thispagestyle{empty}
+\newgeometry{left=0mm,bottom=0mm, top=0mm, right=0mm}
+\noindent\TypesetCoffin \result
+\restoregeometry

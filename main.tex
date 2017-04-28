@@ -1,0 +1,31 @@
+% !TEX TS-program = XeLaTeX
+
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\usepackage{xcoffins}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{setspace}
+
+% Set up commands for title page generation
+\definecolor{ethblue}{RGB}{31, 64, 122}
+
+\newfontfamily\dinprobold{DINPro-Bold}
+\newfontfamily\dinproregular{DINPro-Regular}
+\newfontfamily\dinprolight{DINPro-Light}
+
+% Tell LaTeX where to look for graphics
+\graphicspath{ {images/} }
+
+\begin{document}
+\input{title}
+
+\pagenumbering{roman}
+
+\chapter*{Declaration of originality}
+\input{declarationoforiginality}
+
+\tableofcontents
+
+\end{document}
